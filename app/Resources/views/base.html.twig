@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>{% block title %}House of Fashion{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	
+	{% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <!-- Custom styles for this template -->
+    <!--link href="product.css" rel="stylesheet">
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/62C684F6-5943-DD4E-B7A7-6563CD3371BE/main.js" charset="UTF-8"></script--></head>
+
+  <body>
+
+    <nav class="site-header sticky-top py-0">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Support</a>        
+      </div>
+    </nav>
+
+	<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+      <div class="col-md-9 p-lg-1 mx-auto my-1">
+        <h1 class="display-3 font-weight-normal">House of Fashion</h1>
+		<p class="lead font-weight-normal">- A New Fashions Landmark in the city</p>
+        <p class="lead font-weight-normal">Over decades, “House of Fashions” has always been the one stop destination that offers a broad choice for their customers when it comes to fashion.</p>
+      </div>
+      <div class="product-device box-shadow d-none d-md-block"></div>
+      <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+	
+	<nav class="site-header sticky-top py-0">
+      <div class="container d-flex flex-column flex-md-row justify-content-between">
+		<a class="py-2 d-none d-md-inline-block" href="#"></a>
+		<a class="py-2 d-none d-md-inline-block" href="#" onclick="getProducts('all',4);">All</a>
+        <a class="py-2 d-none d-md-inline-block" href="#" onclick="getProducts('women',4);">Women</a> 
+		<a class="py-2 d-none d-md-inline-block" href="#" onclick="getProducts('men',4);">Men</a>
+        <a class="py-2 d-none d-md-inline-block" href="#" onclick="getProducts('kids',4);">Kids</a> 
+        <a class="py-2 d-none d-md-inline-block" href="#" onclick="getProducts('baby',4);">Baby</a> 
+		<a class="py-2 d-none d-md-inline-block" href="#"></a>
+      </div>
+    </nav>
+	
+	{% block body %}{% endblock %}       
+        
+    <footer class="container py-5">
+	  <h5>The organiation has a portfolio of sub-brands.</h5>
+      <div class="row">
+        <div class="col-6 col-md">
+          <h6>Glitz - The fshion Destination</h6>
+          <p class="text-muted text-small" >The Fashion Destination which offers styles that exudes glamour and sophistication with world-renowned brands. The outlet is synonymous with the ultimate fashion trends for shopaholics who seek the latest trends in designer wear and this has made Glitz a preferred one stop shop for fashion.</p>
+        </div>
+        <div class="col-6 col-md">
+          <h6>Why pay more</h6>
+          <p class="text-muted text-small" >This store is conceptualized as a warehouse outlet, which ideal for customers who look for a quick bargain. Despite the rock bottom prices, the products available are of good quality. The attractive prices at this outlet ensures that it is a must visit by all shopaholics expecting a good bargain.</p>
+        </div>        
+      </div>
+    </footer>
+
+	{% block javascripts %}{% endblock %}
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src={{ asset('assets/js/products.js')}}></script>
+	</body>
+</html>
